@@ -1,5 +1,4 @@
 from unittest import TestCase
-import itertools
 
 from problems import problem2
 
