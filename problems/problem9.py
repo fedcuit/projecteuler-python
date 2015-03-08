@@ -1,4 +1,4 @@
-from problems import problem8
+from problems.iterutil import product
 
 __author__ = 'edfeng'
 
@@ -12,4 +12,4 @@ def pythagorean_triplets(n):
 
 
 def the_triplet():
-    return next(problem8.product(ns) for ns in pythagorean_triplets(1000) if sum(ns) == 1000)
+    return next(product(ns) for ns in pythagorean_triplets(1000) if sum(ns) == 1000)

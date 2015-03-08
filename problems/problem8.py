@@ -1,3 +1,5 @@
+from problems.iterutil import product
+
 __author__ = 'edfeng'
 
 raw_number = """
@@ -22,10 +24,6 @@ raw_number = """
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
 """
-
-
-def product(iterable):
-    return reduce(lambda acc, x: acc * x, iterable, 1)
 
 
 def greatest_product(n):
