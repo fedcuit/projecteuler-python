@@ -24,6 +24,10 @@ raw_number = """
 """
 
 
+def product(iterable):
+    return reduce(lambda acc, x: acc * x, iterable, 1)
+
+
 def greatest_product(n):
     import re
 
@@ -31,6 +35,6 @@ def greatest_product(n):
     products = []
     for i in range(len(one_thousand_digit) - 3):
         num = one_thousand_digit[i:i + n]
-        products.append(reduce(lambda acc, x: acc * x, [int(d) for d in num], 1))
+        products.append(product([int(d) for d in num]))
 
     return max(products)
