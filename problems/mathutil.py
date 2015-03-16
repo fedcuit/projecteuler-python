@@ -1,3 +1,5 @@
+import operator
+
 __author__ = 'edfeng'
 
 
@@ -21,5 +23,12 @@ def is_prime(n):
 
 
 def factors(n):
-    return set(reduce(list.__add__,
+    return set(reduce(operator.add,
                       ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
+
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
