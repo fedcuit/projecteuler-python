@@ -1,10 +1,10 @@
-from problems import mathutil
+from problems.mathutil import proper_divisors
 
 __author__ = 'edfeng'
 
 
 def sum_of_proper_divisor(n):
-    return sum(sorted(mathutil.factors(n))[:-1])
+    return sum(proper_divisors(n))
 
 
 def is_amicable_number(n):
