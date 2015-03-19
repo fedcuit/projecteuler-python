@@ -14,8 +14,9 @@ abundant_map = collections.OrderedDict({i: is_abundant_number(i) for i in xrange
 
 
 def not_abundantify_number(n):
-    return not any(map(lambda i: abundant_map[i] and abundant_map[n - i], range(1, n)))
+    match = next((i for i in range(1, n) if abundant_map[i] and abundant_map[n - i]), None)
+    return True if match is None else False
 
 
 def none_abundantify_numbers():
-    return [i for i in xrange(1, 28123 + 1) if not_abundantify_number(i)]
+    return [i for i in range(1, 28123 + 1) if not_abundantify_number(i)]
