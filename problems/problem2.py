@@ -1,14 +1,9 @@
 import itertools
 
+from problems.mathutil import fibonacci_seq
+
+
 __author__ = 'edfeng'
-
-
-def fibonacci_seq():
-    x = 1
-    y = 2
-    while True:
-        yield x
-        x, y = y, y + x
 
 
 def sum_of_fibs():

@@ -49,3 +49,11 @@ def factorial(n):
 
 def proper_divisors(n):
     return sorted(factors(n))[:-1]
+
+
+def fibonacci_seq():
+    x = 1
+    y = 2
+    while True:
+        yield x
+        x, y = y, y + x
